@@ -39,7 +39,7 @@
             </table>
         </div>
     </div>
-    <script src="js/our.js"></script>
+    <script src="api/main.js"></script>
     <script>
         var tableData = [];
         var targetTable = document.querySelector("#eszter");
@@ -50,7 +50,7 @@
 
         document.querySelector("#empl-btn")
             .addEventListener("click", function () {
-                getJson("api/employees.sql", function (employees) {
+                getJson("api/sql/employees", function (employees) {
                     tableData = employees;
                     fillTable(tableData);
                 });

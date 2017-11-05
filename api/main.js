@@ -36,8 +36,8 @@ function postData(url, data, callback) {
 
 // Példák:
 // Teljes tábla lekérésére.
-getJson("api/employees", function (employees) {
-    console.log(customers);
+/*getJson("api/employees", function (employees) {
+    console.log(employees);
 });
 /*
 // Egy record lekérése.

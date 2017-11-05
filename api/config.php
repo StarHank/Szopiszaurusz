@@ -6,11 +6,11 @@ define("DBUSER", "yellowsql");
 define("DBPASSWORD", "eVO94S3WAplpA0me");
 
 // Routing (útválasztó) beállításai.
-define("PREFIX", "api");
+define("PREFIX", "api.php");
 define("SQLDIR", "bigdb");
 $router = array(
     // Select kérések.
-    "/digdb" => "employees.sql",
+    "/sql.php?server=1&db=yellowsql&table=bigdb&pos=0" => "employees.sql",
     /*"/customers/:id" => "one_customer.sql",
     "/customers/limit/:s" => "limit_customer.sql",
     "/products" => "all_products.sql",
