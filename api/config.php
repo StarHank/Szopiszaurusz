@@ -1,17 +1,17 @@
 <?php
 
 // Adatbázis kapcsolat beállításai.
-define("DBNAME", "bestyellow");
-define("DBUSER", "bestyellow");
-define("DBPASSWORD", "BVxfn7gaLppkcSty");
+define("DBNAME", "yellowsql");
+define("DBUSER", "yellowsql");
+define("DBPASSWORD", "eVO94S3WAplpA0me");
 
 // Routing (útválasztó) beállításai.
 define("PREFIX", "api");
-define("SQLDIR", "sql");
+define("SQLDIR", "bigdb");
 $router = array(
     // Select kérések.
-    "/customers" => "all_customer.sql",
-    "/customers/:id" => "one_customer.sql",
+    "/digdb" => "employees.sql",
+    /*"/customers/:id" => "one_customer.sql",
     "/customers/limit/:s" => "limit_customer.sql",
     "/products" => "all_products.sql",
     // Insert kérések.

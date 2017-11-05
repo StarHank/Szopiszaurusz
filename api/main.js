@@ -3,14 +3,14 @@
  * @param {function} callback, a függvény ami megkapja az adatokat
  */
 function getJson(url, callback) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("get", url);
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", url);
 
-  xhr.onload = function(ev) {
-    var serverData = JSON.parse(ev.target.response);
-    callback(serverData);
-  };
-  xhr.send();
+    xhr.onload = function (ev) {
+        var serverData = JSON.parse(ev.target.response);
+        callback(serverData);
+    };
+    xhr.send();
 }
 
 /** Adatok küldése az API -nak.
@@ -21,10 +21,10 @@ function getJson(url, callback) {
 function postData(url, data, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open("post", url);
-  
-    xhr.onload = function(ev) {
-      var serverData = JSON.parse(ev.target.response);
-      callback(serverData);
+
+    xhr.onload = function (ev) {
+        var serverData = JSON.parse(ev.target.response);
+        callback(serverData);
     };
 
     if (typeof data !== "string") {
@@ -33,41 +33,41 @@ function postData(url, data, callback) {
     xhr.send(data);
 }
 
-/*
+
 // Példák:
 // Teljes tábla lekérésére.
-getJson("api/customers", function(customers) {
+getJson("api/employees", function (employees) {
     console.log(customers);
 });
-
+/*
 // Egy record lekérése.
-getJson("api/customers/2", function(customers) {
+getJson("api/customers/2", function (customers) {
     console.log(customers);
 });
 
 // Record frissítése.
 var customer = {
     customer_name: "Happy Chapman",
-    contact_name: "Mother", 
+    contact_name: "Mother",
     address: "126 street",
-    city: "New York", 
+    city: "New York",
     postcode: "US3214",
     country: "USA"
 };
-postData('api/customers/update/1', customer, function(response) {
+postData('api/customers/update/1', customer, function (response) {
     console.log(response);
 });
 
 // Record beszúrása.
 var customer = {
     customer_name: "Happy Chapman",
-    contact_name: "Mother", 
+    contact_name: "Mother",
     address: "126 street",
-    city: "New York", 
+    city: "New York",
     postcode: "US3214",
     country: "USA"
 };
-postData('api/customers/insert', customer, function(response) {
+postData('api/customers/insert', customer, function (response) {
     console.log(response);
 });
 */
